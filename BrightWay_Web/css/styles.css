@@ -1,0 +1,107 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 1000;
+}
+
+header .menu-icon {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Sidebar Menu Styles (Pop-up effect) */
+#menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    z-index: 999;
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-100%); /* Initially off-screen */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    padding-top: 50px;
+}
+
+#menu.open {
+    opacity: 1; /* Make the menu visible */
+    transform: translateX(0); /* Slide it into view */
+}
+
+#menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#menu ul li {
+    padding: 10px 20px;
+}
+
+#menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Landing Page Styles */
+#landing {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../images/landing-background/kristoforus.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+    padding: 220px;
+    
+}
+
+#landing h1 {
+    font-size: 3em;
+}
+
+#landing p {
+    font-size: 1.5em;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Mobile Menu Styles */
+@media screen and (max-width: 768px) {
+    #menu {
+        width: 100%;
+    }
+
+    #menu.open {
+        left: 0;
+    }
+
+    header .menu-icon {
+        display: block;
+    }
+}
