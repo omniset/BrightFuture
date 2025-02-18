@@ -3,36 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student-Teacher Web</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/scripts.js" defer></script>
+    <title>Student Violation System</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
 </head>
 <body>
-    <!-- Header Section (without logo) -->
+    <!-- Header with Menu and Login Buttons -->
     <header>
-        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger Menu Icon -->
+        <div class="header-left">
+            <button class="menu-button">Menu</button>
+            <div class="sliding-menu">
+                <a href="public_view.php">View Violations</a>
+                <a href="consultation.php">Request Consultation</a>
+            </div>
+        </div>
+        <div class="header-right">
+            <a href="teacher_login.php"><button class="login-button">Login</button></a>
+        </div>
     </header>
 
-    <!-- Sidebar Menu -->
-    <nav id="menu">
-        <ul>
-            <li><a href="views/add_student.php">Teacher: Add Student</a></li>
-            <li><a href="views/add_violation.php">Teacher: Add Violation</a></li>
-            <li><a href="views/teacher_violations.php">Teacher: View Violations</a></li>
-            <li><a href="views/mental_health_form.php">Student: Mental Health Form</a></li>
-            <li><a href="views/request_consultation.php">Student: Request Consultation</a></li>
-        </ul>
-    </nav>
-
-    <!-- Landing Page Section with Background Image -->
-    <section id="landing">
-        <h1>Welcome to the Student-Teacher Web</h1>
-        <p>Your platform for managing student violations and supporting mental health.</p>
-    </section>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 Student-Teacher Web. All rights reserved.</p>
-    </footer>
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Welcome to the Student Violation System</h1>
+        <p>Use the menu above to navigate the system.</p>
+    </div>
 </body>
 </html>

@@ -1,0 +1,93 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/background.jpg'); /* Add your background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    position: relative; /* Ensure the sliding menu is positioned relative to the header */
+}
+
+.header-left, .header-right {
+    display: flex;
+    align-items: center;
+}
+
+/* Menu Button */
+.menu-button {
+    background-color: #008CBA; /* Blue */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.menu-button:hover {
+    background-color: #007B9E;
+}
+
+/* Sliding Menu (Slides from Left) */
+.sliding-menu {
+    display: block; /* Initially visible for debugging */
+    position: fixed;
+    top: 60px; /* Adjust based on header height */
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black */
+    padding: 10px;
+    border-radius: 0 5px 5px 0; /* Rounded corners on the right */
+    z-index: 1000;
+    width: 200px; /* Set a fixed width */
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%); /* Start off-screen */
+}
+
+.sliding-menu a {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.sliding-menu a:hover {
+    background-color: #333;
+}
+
+/* Login Button */
+.login-button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-button:hover {
+    background-color: #45a049;
+}
+
+
+/* Main Content */
+.main-content {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    margin: 20px;
+    border-radius: 10px;
+    margin-top: 80px; /* Adjust to avoid overlap with the header */
+}
